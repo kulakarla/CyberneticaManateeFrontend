@@ -15,6 +15,17 @@ code {
     monospace;
 }
 
+.mainCanvas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
 table{
   border-spacing: 0;
   font-family: RalewayMedium;
@@ -59,6 +70,10 @@ tr, td, th{
 
 td{
   color: #575A5E;
+}
+
+i{
+  color: #A0A3A7;
 }
 
 

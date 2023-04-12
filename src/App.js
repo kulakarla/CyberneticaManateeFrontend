@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import mainLogo from "./img/FrontendLogo.png"
 import './App.css';
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
@@ -39,20 +39,23 @@ export default function App() {
     return (
         <div className="App">
             <body>
-            <table>
-                <thead>
-                <tr>
-                    <th>Application ID</th>
-                    <th>Candidate Name</th>
-                    <th>Interview Type</th>
-                    <th>Interview Date</th>
-                    <th>Interviewer Name</th>
-                </tr>
-                </thead>
-                <tbody>
-                {showPosts}
-                </tbody>
-            </table>
+                <div className="mainCanvas">
+                    <img src={mainLogo} alt="Logo" />
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Candidate Name</th>
+                            <th>Interview Type</th>
+                            <th>Interview Date</th>
+                            <th>Interviewer Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {showPosts}
+                        </tbody>
+                    </table>
+                </div>
             </body>
         </div>
     );
