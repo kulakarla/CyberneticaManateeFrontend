@@ -34,7 +34,15 @@ export default function App() {
     }
 
     useEffect(() => {
-        pullJson()
+
+        //pullJson();
+
+        const interval = setInterval(() => {
+            pullJson();
+        }, 3000);
+
+        return () => clearInterval(interval);
+
     }, [])
 
     return (
