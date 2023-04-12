@@ -18,6 +18,7 @@ export default function App() {
                     return (
                         <tr key={application.id}>
                             <td>{application.id}</td>
+                            <td>{application.applicationState}</td>
                             <td>{application.candidate.firstName} {application.candidate.lastName}</td>
                             <td>{application.interview == null ? "" : application.interview.interviewType}</td>
                             <td>{application.interview == null ? <i>no interview scheduled</i> : format(new Date(application.interview.interviewTime), 'MMMM do, yyyy H:mm')}</td>
@@ -45,6 +46,7 @@ export default function App() {
                         <thead>
                         <tr>
                             <th>Application ID</th>
+                            <th>Application State</th>
                             <th>Candidate Name</th>
                             <th>Interview Type</th>
                             <th>Interview Date</th>
