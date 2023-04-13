@@ -35,7 +35,8 @@ export default function App() {
 
     useEffect(() => {
 
-        //pullJson();
+        //for initial quick load, will continue as intervals
+        pullJson();
 
         const interval = setInterval(() => {
             pullJson();
@@ -50,21 +51,23 @@ export default function App() {
             <body>
                 <div className="mainCanvas">
                     <img src={mainLogo} alt="Logo" />
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Application ID</th>
-                            <th>Application State</th>
-                            <th>Candidate Name</th>
-                            <th>Interview Type</th>
-                            <th>Interview Date</th>
-                            <th>Interviewer Name</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {showPosts}
-                        </tbody>
-                    </table>
+                    <div className="tableWrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Application ID</th>
+                                    <th>Application State</th>
+                                    <th>Candidate Name</th>
+                                    <th>Interview Type</th>
+                                    <th>Interview Date</th>
+                                    <th>Interviewer Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {showPosts}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </body>
         </div>

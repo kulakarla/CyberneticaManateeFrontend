@@ -31,6 +31,19 @@ table{
   font-family: RalewayMedium;
 }
 
+
+.tableWrapper{
+  height: 310px;
+  overflow: auto;
+  margin-bottom: 100px;
+}
+
+thead tr th {
+  position: sticky;
+  top: 0;
+}
+
+
 th{
   background-color: #FC5B5B;
   color: white;
@@ -44,15 +57,6 @@ th:first-of-type{
 th:last-of-type{
   border-top-right-radius: 10px;
 }
-
-tr:last-of-type td:first-of-type{
-  border-bottom-left-radius: 10px;
-}
-
-tr:last-of-type td:last-of-type{
-  border-bottom-right-radius: 10px;
-}
-
 
 
 tr:nth-child(even) {
